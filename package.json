@@ -1,0 +1,22 @@
+{
+  "name": "porsche-website",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/mohabibrahim634-ui/Porsche-website#readme",
+  "bugs": {
+    "url": "https://github.com/mohabibrahim634-ui/Porsche-website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohabibrahim634-ui/Porsche-website.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+
+  }
+}
