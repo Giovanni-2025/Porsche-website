@@ -1,0 +1,138 @@
+.home {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: absolute;
+  width: 100%;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  z-index: 10;
+}
+
+.navLinks a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: #ccc;
+}
+
+/* HERO */
+.hero {
+  height: 380px;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+              url("https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1400&q=80")
+              center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  color: white;
+}
+
+.btnDark {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btnDark:hover {
+  background: #333;
+}
+
+.btnOutline {
+  background: transparent;
+  border: 1px solid black;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* CATEGORIES */
+.categories {
+  padding: 50px;
+  text-align: center;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.categoryCard {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.categoryCard img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.categoryCard:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.categoryCard:hover .overlay {
+  background: rgba(0,0,0,0.6);
+}
+
+.categoryInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MODELS */
+.models {
+  background: #f7f7f7;
+  padding: 40px;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+}
+
+.modelImg {
+  width: 350px;
+  transition: 0.4s;
+}
+
+.modelImg:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 40px;
+}
+
+.left { left: 10px; }
+.right { right: 10px; }
