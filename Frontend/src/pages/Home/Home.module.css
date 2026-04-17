@@ -3,25 +3,9 @@
 }
 
 /* NAVBAR */
-.navbar {
-  position: absolute;
-  width: 100%;
-  padding: 16px 40px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  z-index: 10;
-}
 
-.navLinks a {
-  margin: 0 15px;
-  color: white;
-  text-decoration: none;
-}
 
-.navLinks a:hover {
-  color: #ccc;
-}
+
 
 /* HERO */
 .hero {
@@ -64,20 +48,22 @@
 .categoryGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 20px; /* more spacing */
 }
 
 .categoryCard {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  border-radius: 12px;
+  height: 180px; /* bigger card */
 }
 
 .categoryCard img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  transition: 0.4s;
+  height: 100%;
+  object-fit: cover; /* fills nicely */
+  object-position: center; /* keeps focus centered */
+  transition: 0.4s ease;
 }
 
 .categoryCard:hover img {
@@ -116,8 +102,9 @@
 }
 
 .modelImg {
-  width: 350px;
-  transition: 0.4s;
+  width: 600px;   /* bigger */
+  max-width: 90%; /* responsive */
+  transition: 0.4s ease;
 }
 
 .modelImg:hover {

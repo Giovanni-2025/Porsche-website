@@ -1,17 +1,24 @@
 import { useState } from "react";
 import styles from "./Home.module.css";
-
+import Navbar from "../../components/Navbar/Navbar";    
+import img911 from "../../assets/icons/911@2x.png";
+import taycan from "../../assets/icons/electric car2.jpg"
+import cayenee from "../../assets/icons/filters_format(avif) (4).png"
+import suv from "../../assets/icons/suv car.jpg"
+import sport from "../../assets/icons/sport car.webp"
+import electric from "../../assets/icons/electric car.jpg"
+import sedan from "../../assets/icons/sedan car.jpg"
 const categories = [
-  { label: "SUV", img: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=300&q=80" },
-  { label: "Sports", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&q=80" },
-  { label: "Electric", img: "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=300&q=80" },
-  { label: "Sedan", img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=300&q=80" },
+  { label: "SUV", img: suv, style: { width: "80%",height: "80%" } },
+  { label: "Sports", img: sport, style: { width: "80%",height: "80%" } },
+  { label: "Electric", img: electric, style: { width: "80%",height: "80%" } },
+  { label: "Sedan", img: sedan, style: { width: "80%",height: "80%" } },
 ];
 
 const models = [
-  { name: "911", img: "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=500&q=80" },
-  { name: "Taycan", img: "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=500&q=80" },
-  { name: "Cayenne", img: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&q=80" },
+  { name: "911", img: img911  },
+  { name: "Taycan", img: taycan },
+  { name: "Cayenne", img: cayenee },
 ];
 
 export default function Home() {
@@ -21,20 +28,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-      {/* NAVBAR */}
-      <nav className={styles.navbar}>
-        <span className={styles.logo}>Porsche</span>
-        <div className={styles.navLinks}>
-          <a href="./HomePage.jsx">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">About</a>
-        </div>
-        <div className={styles.navIcons}>
-          <span>🛒 0</span>
-          <span>👤 Account</span>
-        </div>
-      </nav>
-
+        
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
