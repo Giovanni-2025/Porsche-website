@@ -2,6 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './CarCard.module.css';
 import React from "react";
 
+
+const userIcon = <i class="fa-solid fa-user pe-2"></i>;
 function fuleIcon(fuel) {
   switch (fuel) {
     case "Gasoline":
@@ -12,6 +14,7 @@ function fuleIcon(fuel) {
       return <i class="fa-solid fa-gas-pump pe-3 me-1"></i>;
   }
 }
+
 
 
 export default function CarCard({ name, year, fuel, seats, price, image }) {
@@ -29,7 +32,7 @@ export default function CarCard({ name, year, fuel, seats, price, image }) {
           </div>
           <div className="d-flex justify-content-between mb-3" style={{ fontSize: "0.8rem", color: "#666" }}>
             <span>{fuleIcon(fuel)}{fuel}</span>
-            <span>👤 {seats} seats</span>
+            <span>{userIcon} {seats} seats</span>
           </div>
         </div>
         <div className="mt-auto d-flex justify-content-center">
