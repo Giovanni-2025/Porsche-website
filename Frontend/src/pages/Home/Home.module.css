@@ -1,69 +1,94 @@
 .home {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
 }
-
-/* NAVBAR */
-
-
-
 
 /* HERO */
 .hero {
-  height: 380px;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+  height: 500px;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.2)),
               url("https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1400&q=80")
               center/cover no-repeat;
   display: flex;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 60px;
   color: white;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.word {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heroSub {
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 1s forwards;
 }
 
 .btnDark {
   background: black;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
   cursor: pointer;
+  font-weight: 600;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 1.4s forwards;
 }
 
 .btnDark:hover {
-  background: #333;
+  background: #222;
 }
 
-.btnOutline {
-  background: transparent;
-  border: 1px solid black;
-  padding: 10px 20px;
-  margin-left: 10px;
-  cursor: pointer;
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* CATEGORIES */
 .categories {
-  padding: 50px;
+  padding: 70px 50px;
   text-align: center;
 }
 
 .categoryGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* more spacing */
+  gap: 20px;
 }
 
 .categoryCard {
   position: relative;
-  overflow: hidden;
+  height: 200px;
   border-radius: 12px;
-  height: 180px; /* bigger card */
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .categoryCard img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* fills nicely */
-  object-position: center; /* keeps focus centered */
-  transition: 0.4s ease;
+  object-fit: cover;
+  transition: 0.5s;
 }
 
 .categoryCard:hover img {
@@ -73,53 +98,133 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
-}
-
-.categoryCard:hover .overlay {
-  background: rgba(0,0,0,0.6);
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
 
 .categoryInfo {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
   color: white;
   display: flex;
   justify-content: space-between;
+  font-weight: 600;
 }
 
 /* MODELS */
 .models {
-  background: #f7f7f7;
-  padding: 40px;
+  background: #F5F5F5;
+  padding: 120px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.sideLabel {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  font-size: 48px;
+ 
+  
+    font-family: 'Inter', sans-serif;
+       /* adjust size */
+  font-weight: 400;    /* important (not bold) */
+  letter-spacing: 1px;
+
+}
+.bigTitle {
+  font-size: 64px;
+  font-weight: 900;
+  color: #444;
+  margin-bottom: 40px;
 }
 
+/* CAROUSEL */
 .carousel {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modelContent {
+  position: relative;
+  z-index: 2;
 }
 
 .modelImg {
-  width: 600px;   /* bigger */
-  max-width: 90%; /* responsive */
-  transition: 0.4s ease;
+  width: 700px;
+  max-width: 90%;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .modelImg:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25));
 }
 
+/* SIDE CARS */
+.sideCarLeft,
+.sideCarRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 520px;
+  opacity: 0.15;
+  filter: grayscale(100%);
+}
+
+.sideCarLeft {
+  left: -140px;
+}
+
+.sideCarRight {
+  right: -140px;
+}
+
+.sideCarLeft img,
+.sideCarRight img {
+  width: 100%;
+}
+
+/* TABS */
+.modelTabs {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.modelTab {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.modelTab:hover {
+  color: #000;
+}
+
+.active {
+  color: #000;
+  border-bottom: 2px solid #c9a400;
+}
+
+/* ARROWS */
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
+  font-size: 30px;
   background: none;
   border: none;
-  font-size: 40px;
+  cursor: pointer;
 }
 
-.left { left: 10px; }
-.right { right: 10px; }
+.left { left: 40px; }
+.right { right: 40px; }
