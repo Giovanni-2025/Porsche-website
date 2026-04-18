@@ -1,8 +1,4 @@
 import styles from './Footer.module.css';
-import linkedin from '../../assets/icons/linkedin.png';
-import youtube from '../../assets/icons/youtube.png';
-import instagram from '../../assets/icons/instagram.png';
-import facebook from '../../assets/icons/facebook.png';
 
 export default function Footer() {
   return (
@@ -14,19 +10,19 @@ export default function Footer() {
             <a href="#" className="col-auto text-white text-decoration-none mx-5">About</a>
             <p className="col-auto text-white text-decoration-none mx-5 mb-0">Contact</p>
           </div>
-          <div className="row d-flex justify-content-center g-3 mt-0 mb-4 me-2">
+          <div className="row d-flex justify-content-center g-3 mt-0 m-4 me-2">
             <div className="col-3"></div>
-            <a href="https://www.linkedin.com/company/porsche" target="_blank" className="col-auto">
-              <img src={linkedin} className="col-auto" alt="Porsche Logo" style={{ height: "30px" }} />
+            <a href="https://www.linkedin.com/company/porsche" target="_blank" className="col-auto text-white text-decoration-none">
+              <i className={`fa-brands fa-linkedin-in fs-3 ${styles.iconHover}`}></i>
             </a>
-            <a href="https://www.youtube.com/user/Porsche" target="_blank" className="col-auto pt-2">
-              <img src={youtube} className="col-auto" alt="Porsche Logo" style={{ height: "30px" }} />
+            <a href="https://www.youtube.com/user/Porsche" target="_blank" className="col-auto text-white text-decoration-none">
+              <i className={`fa-brands fa-youtube fs-3 ${styles.iconHover}`}></i>
             </a>
-            <a href="https://www.instagram.com/porsche" target="_blank" className="col-auto">
-              <img src={instagram} className="col-auto" alt="Porsche Logo" style={{ height: "30px" }} />
+            <a href="https://www.instagram.com/porsche" target="_blank" className="col-auto text-white text-decoration-none">
+              <i className={`fa-brands fa-instagram fs-3 ${styles.iconHover}`}></i>
             </a>
-            <a href="https://www.facebook.com/porsche" target="_blank" className="col-auto">
-              <img src={facebook} className="col-auto" alt="Porsche Logo" style={{ height: "30px" }} />
+            <a href="https://www.facebook.com/porsche" target="_blank" className="col-auto text-white text-decoration-none">
+              <i className={`fa-brands fa-facebook-f fs-3 ${styles.iconHover}`}></i>
             </a>
           </div>
         </div>

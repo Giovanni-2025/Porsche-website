@@ -1,8 +1,18 @@
+import { useEffect, useState } from "react";
 import styles from './Navbar.module.css';
-import cartIcon from '../../assets/icons/cart.png';
-import accountIcon from '../../assets/icons/account.png';
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <nav className="navbar bg-white container-fluid">
@@ -15,13 +25,13 @@ export default function Navbar() {
         <div className="col d-flex justify-content-end align-items-center">
           <a className="text-decoration-none text-reset" href="#">
             <div className={`d-flex g-0 align-items-center p-1 ${styles.iconHover}`}>
-              <img src={cartIcon} alt="cart icon" style={{ width: '22px', height: '22px' }} />
+              <i className={`fa-solid fa-cart-shopping fs-5 ${styles.iconHover}`}></i>
               <p className="text-reset m-0">0</p>
             </div>
           </a>
           <div>
-            <a className={` mx-4 p-1 ${styles.iconHover || ''}`} href="#">
-              <img src={accountIcon} alt="account icon" style={{ width: '20px', height: '20px' }} />
+            <a className={` mx-4 p-1 text-decoration-none text-reset ${styles.iconHover || ''}`} href="#">
+              <i className={`fa-solid fa-user fs-5 ${styles.iconHover}`}></i>
             </a>
           </div>
         </div>
