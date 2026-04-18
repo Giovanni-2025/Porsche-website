@@ -1,11 +1,5 @@
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import styles from './App.module.css';
+import Profile from './pages/Profile/Profile';
+
 export default function App() {
-  return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
-  )
+  return <Profile />;
 }
