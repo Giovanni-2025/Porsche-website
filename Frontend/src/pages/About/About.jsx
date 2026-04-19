@@ -1,9 +1,11 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import wallpaper from "../../assets/images/wallpaper-porsche.png";
+import Footer from "../../components/Footer/Footer";
 
 const About = () => {
   return (
+    <>
     <div style={{ background: "#fff" }}>
       <Navbar />
 
@@ -107,9 +109,9 @@ const About = () => {
           </div>
         </div>
       </section>
-
-    
     </div>
+    <Footer />
+    </>
   );
 };
 
