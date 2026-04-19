@@ -4,6 +4,8 @@ import pv from "../../assets/icons/Porsche 911 GT3 RS.mp4";
 import img911 from "../../assets/icons/911@2x.png";
 import cayenee from "../../assets/icons/filters_format(avif) (4).png";
 import cayman from "../../assets/icons/718 caymans.png";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";    
 
 import suv from "../../assets/icons/suv car.jpg";
 import sport from "../../assets/icons/sport car.webp";
@@ -48,7 +50,7 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-
+      <Navbar/>
       {/* HERO */}
       <section className={styles.hero}>
        <video
@@ -153,16 +155,18 @@ export default function Home() {
 
         </div>
           <div className={styles.modelButtons}>
-    <a href={models[activeModel].exploreLink} className={styles.btnExplore}>
+    {/* <a href={models[activeModel].exploreLink} className={styles.btnExplore}> */}
+    <a href='/Shop' className={styles.btnExplore}>
       EXPLORE THE MODEL
     </a>
-    <a href={models[activeModel].discoverLink} className={styles.btnDiscover}>
+    {/* <a href={models[activeModel].discoverLink} className={styles.btnDiscover}> */}
+    <a href='/shop' className={styles.btnDiscover}>
       DISCOVER MORE
     </a>
   </div>
 
       </section>
-
+      <Footer/>
     </div>
   );
 }
