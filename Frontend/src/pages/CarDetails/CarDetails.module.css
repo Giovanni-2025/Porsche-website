@@ -16,3 +16,7 @@
 .model-container {
     height: 70vh;
 }
+
+img {
+    height: 50px;
+}
