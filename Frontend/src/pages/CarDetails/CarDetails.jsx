@@ -91,7 +91,7 @@ export const WheelSelector = ({ setWheel }) => {
           {/* clickable card */}
           <label
             htmlFor={wheel.id}
-            className={`btn d-flex align-items-center justify-content-center border rounded p-2  ${selected === wheel.id ? "border-black bg-light" : "border-secondary"}`}
+            className={`btn d-flex align-items-center justify-content-center border rounded p-2  ${selected === wheel.id ? "border-black bg-secondary" : "border-secondary"}`}
             style={{
               width: 90,
               height: 90,
@@ -285,11 +285,11 @@ export default function CarDetails() {
         <div className="col-sm-4 col-11 d-flex flex-column gap-4">
           <div className="bg-white p-4 rounded-4">
             <h1>911 Carrera</h1>
-            <p className="text-light">2026 model</p>
+            <p className="text-secondary">2026 model</p>
             <h5>Price</h5>
             <p className="fs-2">$200,000</p>
             <h5 className="my-4">Description</h5>
-            <p className="text-light">
+            <p className="text-secondary">
               The Porsche 911 Carrera is a high-performance sports car with
               iconic design, strong turbocharged power, and precise handling.
             </p>
@@ -306,22 +306,22 @@ export default function CarDetails() {
           <div className="bg-white p-4 rounded-4">
             <h5 className="mb-4">Full Specifications</h5>
             <div className="d-flex">
-              <span className="text-light">Horsepower</span>
+              <span className="text-secondary">Horsepower</span>
               <span className="ms-auto ">640 hp</span>
             </div>
-            <hr className="border-light" />
+            <hr className="border-secondary" />
             <div className="d-flex">
-              <span className="text-light">Top Speed</span>
+              <span className="text-secondary">Top Speed</span>
               <span className="ms-auto">205 mph</span>
             </div>
-            <hr className="border-light" />
+            <hr className="border-secondary" />
             <div className="d-flex">
-              <span className="text-light">Fuel Type</span>
+              <span className="text-secondary">Fuel Type</span>
               <span className="ms-auto">Gasoline</span>
             </div>
-            <hr className="border-light" />
+            <hr className="border-secondary" />
             <div className="d-flex">
-              <span className="text-light">Seating</span>
+              <span className="text-secondary">Seating</span>
               <span className="ms-auto">4</span>
             </div>
           </div>
